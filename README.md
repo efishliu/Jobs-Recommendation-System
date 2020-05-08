@@ -3,7 +3,7 @@ Jobs-Recommendation-System使用Scrapy爬虫框架对招聘网站进行爬取，
 
 ## 系统设计框架  
 * **前期设计框架**：  
-  * 使用4台云服务器进行大数据平台的搭建，其中master节点作为主节点，其他3台服务器作为slave节点，平台主要安装和使用Hadoop,Spark,Hbase,Hive等工具。
+  * 使用3台云服务器进行大数据平台的搭建，其中master节点作为主节点，其他2台服务器作为slave节点，平台主要安装和使用Hadoop,Spark,Hbase,Hive等工具。
   * 在master节点上通过python开源框架Scrapy将前程无忧网(jobs.51job.com)的职位数据爬取到master节点的MySQL数据库中进行存储，之后通过sqoop工具将数据抽取转换到Hbase数据库中。
   * 通过spark计算框架对hbase中的职位数据进行分析批处理，并将结果存储到Hbase数据库中。
   * 对用户的接口使用的是python开源框架Django的web网页，当用户需要推荐时，通过web端发起请求，之后响应程序使用推荐算法做出推荐并返回给用户。
@@ -20,7 +20,7 @@ Jobs-Recommendation-System使用Scrapy爬虫框架对招聘网站进行爬取，
 * **基于Scrapy的爬虫实现**  
     * **基于单机的爬虫实现：** 在master节点上将数据爬取到MySQL数据库中并通过sqoop工具导入大数据平台。其中单机爬虫实现的源代码项目：[jobs](https://github.com/efishliu/Jobs-Recommendation-System/tree/master/Scrapy/jobs)，MySQL数据库建表SQL：[all_posts_data.sql](https://github.com/efishliu/Jobs-Recommendation-System/blob/master/Scrapy/all_posts_data.sql)。  
     需要安装*anconda3,scrapy,mysql,mysql-server,pymysql*模块。  
-    参考文档：[Scrapy Document]()，[《精通python爬虫框架Scrapy》]()
+    参考文档：[Scrapy Document](https://scrapy.org/doc/)，[《精通python爬虫框架Scrapy》]()
     * **基于分布式的爬虫实现：**
       * 在master节点上整理爬取逻辑和去重工作，将需要爬取网页的url存入Redis共享队列中。  
       * 3台slave节点从master节点的Redis共享队列中获取需要爬取的网页，并行地爬取和解析相应的网页，并将数据存储在各自的MySQL数据库中。  
