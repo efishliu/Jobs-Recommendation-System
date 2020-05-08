@@ -15,7 +15,7 @@ Jobs-Recommendation-System使用Scrapy爬虫框架对招聘网站进行爬取，
 
 ## 系统主要功能模块的实现  
 * **大数据平台的设计与搭建**  
-  * [Hadoop平台搭建说明]()
+  * [Hadoop平台搭建说明](https://github.com/efishliu/Jobs-Recommendation-System/blob/master/Hadoop/Hadoop%20Installtion%20Description.md)
 
 * **基于Scrapy的爬虫实现**  
     * **基于单机的爬虫实现：** 在master节点上将数据爬取到MySQL数据库中并通过sqoop工具导入大数据平台。其中单机爬虫实现的源代码项目：[jobs](https://github.com/efishliu/Jobs-Recommendation-System/tree/master/Scrapy/jobs)，MySQL数据库建表SQL：[all_posts_data.sql](https://github.com/efishliu/Jobs-Recommendation-System/blob/master/Scrapy/all_posts_data.sql)。  
