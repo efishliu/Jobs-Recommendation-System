@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <title>智能评估推荐</title>
+    {% load staticfiles %}
+
+    <link rel="stylesheet" href="{% static '/css/bootstrap.min.css' %}" >
+    <link rel="stylesheet" href="{% static '/style.css' %}">
+
+    <link rel="stylesheet" href="bootstrap.min.css" >
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <div class="main">
+
+        <p></p>
+        <h1 align='center'>
+                <hr />
+            <span style="color: rgb(0, 112, 192);"><strong><span style="font-size: 24px; font-family: 宋体, SimSun;">
+            <span style="color: rgb(0, 112, 192); font-family: 宋体, SimSun; font-size: 36px;">职位智能分析系统</span>
+            &nbsp; 
+            <span style="font-size: 14px; color: rgb(0, 0, 0); font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;"></span></span></strong>
+            <span style="color: rgb(127, 127, 127);">
+            <strong><span style="font-size: 14px; font-family: 宋体, SimSun;">全国云计算应用创新大赛</span></strong></span></span>
+            &nbsp; &nbsp; 
+        </h1>
+        <hr />
+        <hr />
+        <h1>
+            <span style="color: rgb(0, 112, 192);"></span>
+        </h1>
+
+  
+    </div>
+    <div class='information'  >
+        {% for data in data1 %}
+        <h2>{{data['job_name']}}</h2>
+        <p>{{data.job_name}}</p>
+        <p>{{data.job_name[1]}}</p>
+        <hr>
+{% endfor %}
+
+    </div>
+
+</body>
+
+</html>

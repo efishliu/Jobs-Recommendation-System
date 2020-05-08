@@ -1,0 +1,168 @@
+<html >
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>智能评估</title>
+{% load staticfiles %}
+
+<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+</script>
+<!--复选框样式-->
+<link rel="stylesheet" href="{% static 'css/jquery-labelauty.css' %}" />
+<style type="text/css">
+    ul{list-style-type: none;}
+    li{display: inline-block;}
+    li{margin: 10px 0;}
+    input.labelauty + label{font:12px "Microsoft Yahei";}
+    </style>
+
+<!--城市框样式-->
+<link rel="stylesheet" rev="stylesheet" href="{% static 'css/jock-citypicker-2.0.min.css' %}" />
+<script type="text/javascript" src="{% static 'js/jock-citypicker-2.0.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/load_keywords.js' %}"></script>
+<script type="text/javascript">
+window.onload = function(){
+	var a = document.getElementById("city");
+	a.onclick = function(){
+		citypicker.show({left: 400, top : 120}, function(data){
+			a.value = data;
+		});
+	};
+}
+</script>
+
+
+<script type="text/javascript">
+
+
+    function introduce(){
+        $("h4.skills").replaceWith('<h4 class="skills"><textarea name="introduce" id="introduce" cols="100" rows="10"></textarea></h4>'); 
+    }
+    </script>
+
+
+</script>
+<!--行业样式-->
+<link href="{% static 'css/industry_style.css' %}" type="text/css" rel="stylesheet">
+
+
+<script type="text/javascript" src="{% static 'js/load_hycode.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/hgz_hycode.js' %}"></script>
+
+
+
+</head>
+
+<body>
+<div class="cloud_head">
+
+    <p></p>
+    <h1 align='center'>
+    <hr />
+        <span style="color: rgb(0, 112, 192);"><strong><span style="font-size: 24px; font-family: 宋体, SimSun;">
+        <span style="color: rgb(0, 112, 192); font-family: 宋体, SimSun; font-size: 36px;">求职者智能分析系统</span> &nbsp;
+        <span style="font-size: 14px; color: rgb(0, 0, 0); font-family: 微软雅黑,Microsoft YaHei;"></span></span></strong>
+        <span style="color: rgb(127, 127, 127);">
+        <strong><span style="font-size: 14px; font-family: 宋体, SimSun;">全国云计算应用创新大赛</span></strong></span></span>&nbsp; &nbsp; 
+    </h1>
+
+</div>
+<div align="center" >
+        <br>
+        <h2>基本信息</h2>
+    <form name="info" action="/blog/znpg/" method="POST">
+        {% csrf_token %}
+        <table cellspacing="15">
+            <tr>
+                <th align="left"><strong><span style="font-size: 14px; font-family: 软雅黑,Microsoft YaHei;">行业类别</span></strong></th>
+                <th align="left"><strong><span style="font-size: 14px; font-family: 软雅黑,Microsoft YaHei;">工作城市</span></strong></th>
+                <th align="left"><strong><span style="font-size: 14px; font-family: 软雅黑,Microsoft YaHei;">学历</span></strong></th>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" id="industry" name="industry" class="nation" value="" data-value=""  onclick="appendhybar(this,'danxuan')" />
+                </td>
+                <td>
+                    <input id="city" type="text"  name="city1" value=""  readOnly="readOnly"/>
+                </td>
+                <td>
+                    <select id="edu">
+                        <option selected>--选择学历--</option>
+                            <option value="不限">不限</option>
+                            <option value="初中">初中</option>
+                            <option value="高中">高中</option>
+                            <option value="中技">中技</option>
+                            <option value="中专">中专</option>
+                            <option value="大专">大专</option>
+                            <option value="本科">本科</option>
+                            <option value="硕士">硕士</option>
+                            <option value="博士">博士</option>    
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                    <th align="left"><strong><span style="font-size: 14px; font-family: 软雅黑,Microsoft YaHei;">工作经验</span></strong></th>
+                    <th align="left"><strong><span style="font-size: 14px; font-family: 软雅黑,Microsoft YaHei;">职位类型</span></strong></th>
+                    <th align="left"><strong><span style="font-size: 14px; font-family: 软雅黑,Microsoft YaHei;">企业性质</span></strong></th>
+            </tr>
+            <tr>
+                    <td>
+                        <select name="experience" >
+                            <option selected>--工作经验--</option>
+                            <option value="不限">不限</option>
+                            <option value="无经验">无经验</option>
+                            <option value="1-3年">1-3年</option>
+                            <option value="3-5年">3-5年</option>
+                            <option value="5-10年">5-10年</option>
+                            <option value="10年以上">10年以上</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select name="category" >
+                            <option selected>--职位类型--</option>
+                            <option value="全职">全职</option>
+                            <option value="兼职">兼职</option>
+                            <option value="实习">实习</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select name="company_form" >
+                            <option selected>--企业性质--</option>
+                            <option value="上市公司">上市公司</option>
+                            <option value="事业单位">事业单位</option>
+                            <option value="合资">合资</option>
+                            <option value="国企">国企</option>
+                            <option value="民营">民营</option>
+                            <option value="股份制企业">股份制企业</option>
+                            <option value="外商独资">外商独资</option>
+                        </select>
+                    </td>
+            </tr>
+            </table>
+            <hr align=center width=50% color=#987cb9 SIZE=1>
+
+            <input type="button"  id="bt_skills"value="职位技能" onclick="getskills()">
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="button" id="bt_introduce" value="自我介绍" onclick="introduce()">
+            <br><br>
+            <h4 class="skills"></h4>
+<br><br>
+        <h4 class="text-center" style="color:rgb(0, 0, 0); font-family: 宋体, SimSun;">
+                <input type="reset" name='reset' value="复位">
+                &nbsp; &nbsp;
+                <input type="submit" name='submit' value="智能评估" >
+            </h4>
+        
+        </form>
+        
+</div>
+
+<script type="text/javascript" src="{% static 'js/jquery-labelauty.js' %}"></script>
+<script type="text/javascript">
+$(function(){
+$(':input').labelauty();
+});
+
+</script>
+
+</body>
+</html>

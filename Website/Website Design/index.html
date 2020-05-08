@@ -1,0 +1,476 @@
+﻿<!-- index html-->
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+
+    <title>liu-gang.web</title>
+{% load staticfiles %}
+    <!--==== bootstrap ====-->
+    <link href="{% static '/css/bootstrap.min.css' %}" rel="stylesheet">
+    <!--==== font-awesome ====-->
+    <link href="{% static '/css/font-awesome.min.css' %}" rel="stylesheet">
+    <!--==== owl-carousel ====-->
+    <link href="{% static '/css/owl.carousel.css' %}" rel="stylesheet">
+    <!--==== magnific-popup ====-->
+    <link href="{% static '/css/magnific-popup.css' %}" rel="stylesheet">
+    <!--==== animate css ====-->
+    <link href="{% static '/css/animate.min.css' %}" rel="stylesheet">
+
+    <!--==== style css ====-->
+    <link href="{% static '/css/style.css' %}" rel="stylesheet">
+    <!--==== responsive css ====-->
+    <link href="{% static '/css/responsive.css' %}" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
+
+
+
+    <link rel="stylesheet" href="{% static '/assets/css/owl.carousel.min.css' %}">
+
+    <link rel="stylesheet" href="{% static '/assets/css/animate.css' %}">
+
+    <link rel="stylesheet" href="{% static '/assets/css/font-awesome.min.css' %}">
+
+    <link rel="stylesheet" href="{% static '/assets/css/pe-icon-7-stroke.css' %}">
+
+    <link rel="stylesheet" href="{% static '/style.css' %}">
+
+    <link rel="stylesheet" href="{% static '/assets/css/responsive.css' %}">
+    <!--==== jquery ====-->
+    <script src="{% static '/js/jquery-2.1.4.min.js' %}"></script>
+
+    <!--[if lt IE 9]>
+    <script src="{% static '/js/html5shiv/3.7.2/html5shiv.min.js' %}"></script>
+    <script src="{% static '/js/respond/1.4.2/respond.min.js' %}"></script>
+    <![endif]-->
+</head>
+<body>
+
+<!--==== DEMO COLOR PANEL =====-->
+<div class="demo_panel_box">
+    <div class="color_panel_box">
+        <div class="spiner_button slide_in_out"><i class="fa fa-cog fa-spin"></i></div>
+        <span class="red_color"></span>
+        <span class="blue_color"></span>
+        <span class="yellow_color"></span>
+        <span class="purple_color"></span>
+        <span class="pink_color"></span>
+        <span class="green_color"></span>
+    </div>
+</div>
+<!--==== DEMO COLOR PANEL ===-->
+<!--===== Preloader ====-->
+<div class="preloader">
+    <div class="spinner">
+        <div class="double-bounce1"></div>
+        <div class="double-bounce2"></div>
+    </div>
+</div>
+
+<!--=====****************** 开始信息 ****************************=====-->
+<div id="home" class="intro-section">
+
+    <!--===== HEADER AREA =====-->
+    <header class="navbar custom-navbar">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-3 col-xs-12">
+
+                </div>
+
+                <div class="col-md-9 col-sm-9 col-xs-12">
+                    <nav class="main-menu">
+                        <div class="navbar-collapse collapse">
+
+                            <ul class="nav navbar-nav"> <!--== manin menu ==-->
+                                <li class="dropdown active">
+                                    <a href="#home" data-toggle="dropdown" class="theme-color">主页<b class="caret"></b></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="index.html">Home Default</a></li>
+                                        <li><a href="#">Home Animation</a></li>
+                                        <li><a href="#">Home Parallax</a></li>
+                                        <li><a href="#">Home Video</a></li>
+                                    </ul>
+                                </li>
+
+                                <li class="smooth-scroll"><a class="theme-color" href="#about">网站介绍</a></li>
+                                <li class="smooth-scroll"><a class="theme-color" href="#features">行业趋势</a></li>
+
+                                <li class="smooth-scroll"><a class="theme-color" href="#services">服务</a></li>
+                                <li class="smooth-scroll"><a class="theme-color" href="#">博客</a></li>
+                                <li class="smooth-scroll"><a class="theme-color" href="#" >下载资料</a></li>
+                                <li class="smooth-scroll"><a class="theme-color" href="#contact">联系</a></li>
+                                <li class="smooth-scroll"><a class="theme-color" href="#">注册/登录</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+
+            </div>
+
+        </div>
+    </header>
+    <!--===== END HEADER AREA ======-->
+
+    <!--======= WELCOME AREA =======-->
+    <div class="welcome-area">
+        <div id="particles-js"></div>
+        <div class="welcome-table">
+            <div class="welcome-cell">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <div class="welcome-text text-center">
+                                <h4>I'm E - fish</h4>
+                                <h1>Web <span class="theme-color">designer</span></h1>
+                                <h4>这是一个学习网站进行分享测试工作</h4>
+                                <h4>网站建设中，敬请期待</h4>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="#about" class="scroll-btn banner-icon theme-color"><i class="fa fa-angle-double-down"></i></a>
+    </div>
+    <!--===== END WELCOME AREA =====-->
+
+</div>
+<!--=====***************** END INTRO SECTION ***********************=====-->
+
+
+
+
+<!--==== plugins js ====-->
+<script src="{% static '/js/plugins.js' %}"></script>
+<!--==== magnific-popup-options js ====-->
+<script src="{% static '/js/magnific-popup-options.js' %}"></script>
+<!--==== validator js ====-->
+<script src="{% static '/js/validator.min.js' %}"></script>
+<!--==== particles js ====-->
+<script src="{% static '/js/particles.min.js' %}"></script>
+<!--==== app js ====-->
+<script src="{% static '/js/app.js' %}"></script>
+<!--==== app js ====-->
+<script src="{% static '/js/wow-1.3.0.min.js' %}"></script>
+<!--==== main js ====-->
+<script src="{% static '/js/main.js' %}"></script>
+
+<section class="about-area  about-grey section-padding" id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-wrapper">
+                <div class="col-md-6 col-xs-12">
+                    <div class="about-content-lerf hidden-sm wow fadeInRight" data-wow-delay="0.1s">
+                        <img src="{% static '/assets/images/2.jpg' %}"  alt="about">
+                    </div>
+                </div>
+                <div class="col-md-6 col-xs-12">
+                    <div class="about-content-right wow fadeInRight">
+                        <h3>网站主要功能展示和测试</h3>
+                        <p>大家好，我是饿鱼，我是这个网站的开发者，本网站作为个人开发测试实验使用，不作为商业用途，仅作为学习交流，主要测试功能如下：</p>
+                        <p>1.行业前沿知识分享（自动爬虫）</p>
+                        <p>2.数据采集展示模块（物联网数据前端可视化展示和控制）</p>
+                        <p>3.信息安全和网络安全知识介绍</p>
+                        <p>4.常见编程语言的介绍和精品课程</p>
+                        <p>5.个人学习笔记博客</p>
+                        <a href="http://www.csdn.net" target="_blank" class="learn-more">Learn more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+ 
+<section class="features-area section-padding" id="features">
+<div class="container">
+<div class="row">
+<div class="features-wrapper">
+    <section class="services-area section-padding" id="hangyequshi">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="section-heading text-center wow fadeInUp">
+                        <h3>行业趋势</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<div align="center"> 
+<div class="col-md-2 col-sm-4 col-xs-12">
+<div class="single-feature wow fadeInUp" data-wow-delay="0.3s">
+<i class="pe-7s-headphones"></i>
+    <h4 ><a href="https://baike.baidu.com/item/%E4%BA%91%E8%AE%A1%E7%AE%97" target="_blank">云计算</a></h4>
+<p>云计算是基于互联网的相关服务的增加、使用和交付模式，通常涉及通过互联网来提供动态易扩展且经常是虚拟化的资源。</p>
+</div>
+</div>
+ 
+<div class="col-md-2 col-sm-4 col-xs-12">
+<div class="single-feature wow fadeInUp" data-wow-delay="0.4s">
+<i class="pe-7s-settings"></i>
+    <h4 ><a href="https://baike.baidu.com/item/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/9180" target="_blank">人工智能</a></h4>
+<p>人工智能（Artificial Intelligence），英文缩写为AI。它是研究、开发用于模拟、延伸和扩展人的智能的理论、方法、技术及应用系统的一门新的技术科学。</p>
+</div>
+</div>
+ 
+<div class="col-md-2 col-sm-4 col-xs-12">
+<div class="single-feature wow fadeInUp" data-wow-delay="0.5s">
+<i class="pe-7s-tools"></i>
+    <h4 ><a href="https://baike.baidu.com/item/%E8%99%9A%E6%8B%9F%E7%8E%B0%E5%AE%9E/207123?fromtitle=VR&fromid=764830" target="_blank">VR虚拟</a></h4>
+<p>虚拟现实技术是一种可以创建和体验虚拟世界的计算机仿真系统，它利用计算机生成一种模拟环境，是一种多源信息融合的、交互式的三维动态视景和实体行为的系统仿真使用户沉浸到该环境中。</p>
+</div>
+</div>
+ 
+<div class="col-md-2 col-sm-4 col-xs-12">
+<div class="single-feature wow fadeInUp" data-wow-delay="0.6s">
+<i class="pe-7s-target"></i>
+    <h4 ><a href="https://baike.baidu.com/item/%E7%89%A9%E8%81%94%E7%BD%91" target="_blank">物联网</a></h4>
+<p> 物联网是新一代信息技术的重要组成部分，也是“信息化”时代的重要发展阶段。其英文名称是：“Internet of things（IoT）”。顾名思义，物联网就是物物相连的互联网。</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+ 
+ 
+
+ 
+
+ 
+<section class="services-area section-padding" id="services">
+<div class="container">
+ 
+<div class="row">
+<div class="col-sm-12">
+<div class="section-heading text-center wow fadeInUp">
+<h3>主要功能服务</h3>
+
+</div>
+</div>
+</div>
+<div class="row">
+<div class="service-wrapper">
+ 
+<div class="col-md-3 col-sm-6">
+<div class="single-service text-center wow fadeInUp" data-wow-delay="0.1s">
+<i class="pe-7s-paint-bucket"></i>
+<h4><a href="">数据采集展示控制模块</a></h4>
+<p>通过物联网感知层采集的数据上传到云端，并通过网页的形式进行展示和控制，其中还包括非结构化数据的展示</p>
+</div>
+</div>
+ 
+<div class="col-md-3 col-sm-6">
+<div class="single-service text-center wow fadeInUp" data-wow-delay="0.2s">
+<i class="pe-7s-bell"></i>
+<h4><a href="https://github.com/efishliu/-">Python爬虫技术</a></h4>
+<p>通过python爬虫技术收集一些相关资料并进行展示。还有python爬虫技术的经验贴</p>
+</div>
+</div>
+ 
+<div class="col-md-3 col-sm-6">
+<div class="single-service text-center wow fadeInUp" data-wow-delay="0.3s">
+<i class="pe-7s-anchor"></i>
+<h4>网络信息安全</h4>
+<p>用专业工具进行安全测试，提高网络安全意识</p>
+</div>
+</div>
+ 
+<div class="col-md-3 col-sm-6">
+<div class="single-service text-center wow fadeInUp" data-wow-delay="0.4s">
+<i class="pe-7s-coffee"></i>
+<h4>大数据/云计算集群测试</h4>
+<p>搭建Hadoop集群，部署manager，node节点，利用MapReduce进行云计算，利用Hbase进行大数据存储</p>
+</div>
+</div>
+ 
+<div class="col-md-3 col-sm-6">
+<div class="single-service text-center wow fadeInUp" data-wow-delay="0.5s">
+<i class="pe-7s-diamond"></i>
+<h4>深度学习</h4>
+<p>利用神经网络，机器学习等进行深度学习（还没接触，随便瞎说）</p>
+</div>
+</div>
+ 
+<div class="col-md-3 col-sm-6">
+<div class="single-service text-center wow fadeInUp" data-wow-delay="0.6s">
+<i class="pe-7s-rocket"></i>
+<h4>算法</h4>
+<p>一些常用的基础算法，并用多种编程语言实现，还有大量算法习题进行应用。更新人工智能算法</p>
+</div>
+</div>
+ 
+<div class="col-md-3 col-sm-6">
+<div class="single-service text-center wow fadeInUp" data-wow-delay="0.7s">
+<i class="pe-7s-box2"></i>
+<h4>计算机基础必备知识</h4>
+<p>计算机组成原理与体系结构、操作系统、数据结构、编译原理等基础知识</p>
+</div>
+</div>
+ 
+<div class="col-md-3 col-sm-6">
+<div class="single-service text-center wow fadeInUp" data-wow-delay="0.8s">
+<i class="pe-7s-cart"></i>
+<h4>OTHER</h4>
+<p>GITHUB,ALIYUN......</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+ 
+<section class="blog-area section-padding" id="blog">
+<div class="container">
+ 
+<div class="row">
+<div class="col-sm-12">
+<div class="section-heading text-center wow fadeInUp">
+<h2>最近更新</h2>
+<p></p>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="owl-carousel blog-slider">
+
+<div class="single-blog wow fadeInUp">
+<div class="col-sm-6">
+<div class="blog-image">
+<a href="#"><img src="{% static '/images/cgq.jpg' %}" alt="blog"></a>
+</div>
+</div>
+<div class="col-md-6">
+<div class="blog-text">
+<div class="blog-date">
+<span>10<br>Jan <br>2018</span>
+</div>
+<h4><a href="#">物联网感知课程设计</a></h4>
+<p>将传感器采集到的数据进行数据展示</br>
+<a href="blog/sensor/" target='_blank'>点击进入</a></p>
+</div>
+</div>
+</div>
+
+ 
+<div class="single-blog wow fadeInUp">
+<div class="col-sm-6">
+<div class="blog-image">
+<a href="#"><img src="{% static '/images/github1.png' %}" alt="blog"></a>
+</div>
+</div>
+<div class="col-md-6">
+<div class="blog-text">
+<div class="blog-date">
+<span>20<br>Oct <br>2017</span>
+</div>
+<h4><a href="https://cloud.seu.edu.cn/contest/newsBroswer.html?newsID=162">大数据分析和挖掘（第四届云计算大赛）</a></h4>
+<p>利用python爬虫开源框架scrapy对智联招聘进行爬取，收集数据后搭建Hadoop进行数据分析挖掘。</br>
+<a href="https://github.com/efishliu/-" target='_blank'>GITHUB源代码</a></p>
+</div>
+</div>
+</div> 
+ 
+<div class="single-blog wow fadeInUp">
+<div class="col-sm-6">
+<div class="blog-image">
+<a href="#"><img src="{% static '/images/jiqun1.jpg' %}" alt="blog"></a>
+</div>
+</div>
+<div class="col-md-6">
+<div class="blog-text">
+<div class="blog-date">
+<span>25 <br>Oct<br>2017</span>
+</div>
+<h4><a href="https://github.com/efishliu/-/blob/master/%E5%A4%A7%E8%A7%84%E6%A8%A1%E5%88%86%E5%B8%83%E5%BC%8F%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E4%B8%8E%E8%AE%BE%E8%AE%A1.rar">Fourinone源码</a></h4>
+<p>大规模分布式系统架构--Fourinone，利用Java编写的类Hadoop架构。</p>
+</div>
+</div>
+</div> 
+<!--
+<div class="single-blog wow fadeInUp">
+<div class="col-sm-6">
+<div class="blog-image">
+<a href="#"><img src="{% static '/assets/images/blog2.jpg' %}" alt="blog"></a>
+</div>
+</div>
+<div class="col-md-6">
+<div class="blog-text">
+<div class="blog-date">
+<span>12 <br>May <br>2017</span>
+</div>
+<h4><a href="#">Lorem Ipsum has been the industry's standard dummy</a></h4>
+<p>When an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived.when an unknown printer took a galley of type and scrambled it to make a type...</p>
+</div>
+</div>
+</div> 
+ 
+<div class="single-blog wow fadeInUp">
+<div class="col-sm-6">
+<div class="blog-image">
+<a href="#"><img src="{% static '/assets/images/blog2.jpg' %}" alt="blog"></a>
+</div>
+</div>
+<div class="col-md-6">
+<div class="blog-text">
+<div class="blog-date">
+<span>12 <br>May <br>2017</span>
+</div>
+<h4><a href="#">Lorem Ipsum has been the industry's standard dummy</a></h4>
+<p>When an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived.when an unknown printer took a galley of type and scrambled it to make a type...</p>
+</div>
+</div>
+</div> -->
+</div>
+</div>
+</div>
+</section>
+  
+<div class="back-top" style="display: block;">
+<a href="#"><i class="fa fa-angle-up"></i></a>
+</div>
+ 
+<script src="{% static '/assets/js/jquery-2.1.4.min.js' %}"></script>
+ 
+<!---<script type="text/javascript" src="https://maps.google.com/maps/api/js?sensor=false&libraries=geometry&v=3.22&key=AIzaSyBc3A_hq2sFzMkASyC0IFih2680tAP-Cec"></script>
+<script src="assets/js/maplace.min.js' %}"></script>--->
+ 
+<script src="{% static '/assets/js/mixitup.min.js' %}"></script>
+ 
+<script src="{% static '/assets/js/owl.carousel.min.js' %}"></script>
+ 
+<script src="{% static '/assets/js/jquery.easing.min.js' %}"></script>
+ 
+<script src="{% static '/assets/js/wow-1.3.0.min.js' %}"></script>
+<script>
+            // Active WOW js
+             if($('.wow').length){
+                var wow = new WOW({
+                    boxClass:     'wow',
+                    animateClass: 'animated',
+                    offset:       0,
+                    mobile:       true,
+                    live:         true 
+                  });
+                wow.init();
+            }
+        </script>
+ 
+<script src="{% static '/assets/js/bootstrap.min.js' %}"></script>
+<script src="{% static '/assets/js/active.js' %}"></script>
+
+</body>
+</html>

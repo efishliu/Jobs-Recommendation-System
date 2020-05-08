@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>智能评估生成单</title>
+    <!-- 引入 G2 文件 -->
+    <script src="https://gw.alipayobjects.com/os/antv/assets/g2/3.0.5-beta.5/g2.min.js"></script>
+    <script type="text/css">
+
+    </script>
+  </head>
+  <body>
+        <div class="cloud_head">
+
+                <p></p>
+                <h1 align='center'>
+                <hr />
+                    <span style="color: rgb(0, 112, 192);"><strong><span style="font-size: 24px; font-family: 宋体, SimSun;">
+                    <span style="color: rgb(0, 112, 192); font-family: 宋体, SimSun; font-size: 36px;">智能评估生成单</span> &nbsp;
+                    <span style="font-size: 14px; color: rgb(0, 0, 0); font-family: 微软雅黑,Microsoft YaHei;"></span></span></strong>
+                    <span style="color: rgb(127, 127, 127);">
+                    <strong><span style="font-size: 14px; font-family: 宋体, SimSun;">全国云计算应用创新大赛</span></strong></span></span>&nbsp; &nbsp; 
+                </h1>
+                <hr align=center width=70% color=#987cb9 SIZE=1>
+        </div>
+
+
+
+
+    <p><strong><span style="font-size: 14px; font-family: 宋体, SimSun;  position: relative;left: 20%; ">{{ city }} - {{ industry }} 薪酬分布图</span></strong></p>
+    <!-- 创建图表容器 -->
+     
+    <table style="border-spacing: 30px 0px;width:100%">
+        <tr>
+            <td>
+                    <div id="c1" class="salary_fenbu" style=" width:600px; height:300px; position: relative;left: 15%; "></div>
+            </td>
+            <td>
+                    <div id="result" style=" width:450px; height:300px;">
+                        <table>
+                            <tr>
+                                <td><p style="font-family: 宋体, SimSun;font-size: 20px;">评估薪酬:</p></td>
+                                <td><p style="font-family: 宋体, SimSun;font-size: 30px;color:red;">{{ salary }}</p> </td>
+                            </tr>
+                            <tr>
+                                <td><p style="font-family: 宋体, SimSun;font-size: 20px;">您的薪酬位于</p></td>
+                                <td><strong><p align="center"  style="color: rgb(0, 112, 192); font-family: 宋体, SimSun; font-size: 20px;" >{{ location }}</p></strong></td>
+                            </tr>
+                            <tr>
+                                <td><p style="font-family: 宋体, SimSun;font-size: 20px;">您的关键词为：</p></td>
+                            </tr>
+                            <tr>
+                                {% for k in key %}
+                                <td><strong><p style="color: rgb(0, 112, 192); font-family: 宋体, SimSun; font-size: 20px;" >{{ k }}/</p></strong></td>
+                            {% endfor %}
+                            </tr>
+                        </table>
+                    </div>
+            </td>
+        </tr>
+    </table>
+
+ <div class="tuijian">
+     <table style="width:80% ;" align="center" cellspacing="10">
+
+             <p align="center"  style="color: rgb(0, 112, 192); font-family: 宋体, SimSun; font-size: 25px;" >最符合您的高薪职位</p>
+
+         <tr>
+             <th>职位名称</th>
+             <th>公司名称</th>
+             <th>职位月薪</th>
+             <th>工作地点</th>
+             <th>匹配度</th>
+         </tr>
+         {% for job in jobs %}
+         <tr>
+             <td style="border-top:#cccccc solid 1px;text-align:center"><a href=' {{ job.jobhref }} '>{{ job.name }}</a></td>
+             <td style="border-top:#cccccc solid 1px;text-align:center"><a href=' {{ job.comhref }} '>{{ job.company }}</a></td>
+             <td style="border-top:#cccccc solid 1px;text-align:center">{{ job.minsalary }}-{{ job.maxsalary }}</td>
+             <td style="border-top:#cccccc solid 1px;text-align:center">{{ job.workcity }}</td>
+             <td style="border-top:#cccccc solid 1px;text-align:center;color:red">{{ job.pre }}</td>
+
+        {% endfor %}
+
+             
+         </tr>
+       
+     </table>
+ </div>
+
+
+
+
+
+    <script>
+            const data = [
+              {x:"低值",y:{{one}}},
+              {x:"中低值",y:{{three}}},
+              {x:"平均值",y:{{five}}},
+              {x:"中高值",y:{{seven}}},
+              {x:"高值",y:{{nine}}},
+            ]; // G2 对数据源格式的要求，仅仅是 JSON 数组，数组的每个元素是一个标准 JSON 对象。
+            // Step 1: 创建 Chart 对象
+            const chart = new G2.Chart({
+              container: 'c1', // 指定图表容器 ID
+              width : 600, // 指定图表宽度
+              height : 300 // 指定图表高度
+            });
+            // Step 2: 载入数据源
+            chart.source(data);
+            chart.coord().transpose();
+            // Step 3：创建图形语法，绘制柱状图，由 genre 和 sold 两个属性决定图形位置，genre 映射至 x 轴，sold 映射至 y 轴
+            chart.intervalDodge().position('x*y').color('x').size(30).label('y')
+            // Step 4: 渲染图表
+            chart.render();
+          </script>
+  </body>
+</html>
