@@ -8,7 +8,7 @@
   * 求职意向信息：期望薪资，工作城市，行业，职位，个人标签，自我评价  *（该部分可由大数据平台根据简历信息进行预测推荐）*  
   * 工作经验信息：时间，公司名称，公司性质，职位，行业，工作描述  
   * 项目经验信息：时间，所属公司，项目名，项目描述，责任描述  
-  * 技能特长信息：技能/语言，证书，培训经历
+  * 技能特长信息：技能/语言，证书，培训经历  
 最终选取作为用户画像标签的信息为：**(用户id，性别，年龄，工作城市，学历，学校，专业，行业，职位，个人标签，技能/语言关键词，自我评价关键词，专业描述关键词，责任描述关键词）**  
 * **用户特征的标签命名的方式与设计：** 用户标签的命名从4个维度进行开发，分为标签主题，标签类型，一级归类，标签明细。  
   * 标签主题：个人基本信息(basic)，教育经历信息(education)，求职意向信息(intention)，工作经验信息(jobexp)，项目经验信息(proexp)，技能特长信息(skill)。  
@@ -16,3 +16,8 @@
   * 一级归类：如性别，学校，专业等。  
   * ~~标签明细：~~  
 最终用户画像标签命名为：(userid,basic_sex,basic_age,intention_city,education_edubk,education_school,education_major,intention_industry,intention_post,intention_selflable,intention_skillkey,intention_evakey,intention_majorkey,intention_workkey)
+
+### 用户行为信息
+* **用户行为信息：** 包括用户对的关键词搜索，对职位信息的浏览，收藏，投递等。
+
+
