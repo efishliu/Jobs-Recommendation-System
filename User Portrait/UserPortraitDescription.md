@@ -11,9 +11,8 @@
   * 技能特长信息：技能/语言，证书，培训经历
 最终选取作为用户画像标签的信息为：**(用户id，性别，年龄，工作城市，学历，学校，专业，行业，职位，个人标签，技能/语言关键词，自我评价关键词，专业描述关键词，责任描述关键词）**  
 * **用户特征的标签命名的方式与设计：**用户标签的命名从3个维度进行开发，分为标签主题，标签类型，维度类型。
-  * 标签主题：个人基本信息(basic)，教育经历信息(education)，求职意向信息(intention)，工作经验信息(jobexp)，项目经验信息(proexp)，技能特长信息(skill)。
-  ~~* 标签类型：统计型(statistic)，数据挖掘型(datamining)。（直接通过表单获取的为统计型，通过关键词提取的为数据挖掘型）~~
-  * 一级归类：
-  ~~* 标签明细：~~
-  如性别：basic_sex,学历：education_edubk,
+  * 标签主题：个人基本信息(basic)，教育经历信息(education)，求职意向信息(intention)，工作经验信息(jobexp)，项目经验信息(proexp)，技能特长信息(skill)。  
+  * ~~标签类型：统计型(statistic)，数据挖掘型(datamining)。（直接通过表单获取的为统计型，通过关键词提取的为数据挖掘型）~~  
+  * 一级归类：如性别，学校，专业等。  
+  * ~~标签明细：~~  
 最终用户画像标签命名为：(userid,basic_sex,basic_age,intention_city,education_edubk,education_school,education_major,intention_industry,intention_post,intention_selflable,intention_skillkey,intention_evakey,intention_majorkey,intention_workkey)
