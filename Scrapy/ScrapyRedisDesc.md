@@ -4,8 +4,8 @@ Scrapy-Redis是一个基于Redis的Scrapy分布式组件。它利用Redis对用�
 scrapy-redis重写了scrapy一些比较关键的代码，将scrapy变成一个可以在多个主机上同时运行的分布式爬虫。  
 
 # 项目说明：  
-[master爬虫项目]()是master节点运行项目，负责整理url逻辑和将需要爬取的url存入Redis  
-[slave爬虫项目]()是其余slave节点运行项目，负责从master节点的Redis的url取出，并解析网页，最后将数据存入MySQL数据库中  
+[master爬虫项目](https://github.com/efishliu/Jobs-Recommendation-System/tree/master/Scrapy/master/master)是master节点运行项目，负责整理url逻辑和将需要爬取的url存入Redis  
+[slave爬虫项目](https://github.com/efishliu/Jobs-Recommendation-System/tree/master/Scrapy/slave)是其余slave节点运行项目，负责从master节点的Redis的url取出，并解析网页，最后将数据存入MySQL数据库中  
 
 # 准备：  
 ```powershell
