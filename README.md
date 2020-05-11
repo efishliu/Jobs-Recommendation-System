@@ -27,10 +27,16 @@ Jobs-Recommendation-System使用Scrapy爬虫框架对招聘网站进行爬取，
       * sqoop工具并行抽取3台slave节点的数据到HDFS文件系统中。**(注意解决sqoop数据倾斜问题）**  
     参考文档：[Scrapy分布式爬虫](https://edu.csdn.net/notebook/python/week10/9.html)
 
-* **基于Django开源框架的web页面**  
+* **用户画像与职位信息标签化处理**  
+    * 用户画像说明： [UserPortraitDescription](https://github.com/efishliu/Jobs-Recommendation-System/blob/master/User%20Portrait/UserPortraitDescription.md)  
+    * 使用TF-IDF,word2vec提取关键词和向量化:  
+    python实现(本地)：[TF_IDF.py]()，[word2vec.py]()  
+    spark ML实现：[spark_tf_idf.py]()，[spark_word2vec.py]()
+    * 使用spark对学历，城市，工作经验，行业等进行薪资统计:[spark_mapreduce]()
+    * 使用Hbase进行数据存储：HBase表结构设计：[HBase]()
+* **基于Django开源框架的web页面与推荐算法**  
+    * 使用MySQL构建HBase的索引：MySQL表结构：[index_hbase.sql]()
+    * 基于内容的推荐:TopN的过滤与排名:[jobs_fliter_rank]()
     * Django框架的实现与部署：[Website Deploy](https://github.com/efishliu/Jobs-Recommendation-System/tree/master/Website/Website%20Deploy)
     * web页面设计：[Website Design](https://github.com/efishliu/Jobs-Recommendation-System/tree/master/Website/Website%20Design)
-* **用户画像与职位信息标签化处理**  
-* **推荐算法**  
-
  
