@@ -20,7 +20,7 @@ Jobs-Recommendation-System使用Scrapy爬虫框架对招聘网站进行爬取，
 * **基于Scrapy的爬虫实现**  
     * **基于单机的爬虫实现：** 在master节点上将数据爬取到MySQL数据库中并通过sqoop工具导入大数据平台。其中单机爬虫实现的源代码项目：[jobs](https://github.com/efishliu/Jobs-Recommendation-System/tree/master/Scrapy/jobs)，MySQL数据库建表SQL：[all_posts_data.sql](https://github.com/efishliu/Jobs-Recommendation-System/blob/master/Scrapy/all_posts_data.sql)。  
     需要安装*anconda3,scrapy,mysql,mysql-server,pymysql*模块。  
-    参考文档：[Scrapy Document](https://scrapy.org/doc/)，[《精通python爬虫框架Scrapy》]()
+    参考文档：[Scrapy Document](https://scrapy.org/doc/)，[《精通python爬虫框架Scrapy》](https://github.com/efishliu/Jobs-Recommendation-System/tree/master/scrapybook)  
     * **基于分布式的爬虫实现：** 
       * 在master节点上整理爬取逻辑和去重工作，将需要爬取网页的url存入Redis共享队列中。 [master爬虫程序](https://github.com/efishliu/Jobs-Recommendation-System/tree/master/Scrapy/master/master)  
       * 3台slave节点从master节点的Redis共享队列中获取需要爬取的网页，并行地爬取和解析相应的网页，并将数据存储在各自的MySQL数据库中。[slave爬虫程序](https://github.com/efishliu/Jobs-Recommendation-System/tree/master/Scrapy/slave)  
@@ -31,7 +31,7 @@ Jobs-Recommendation-System使用Scrapy爬虫框架对招聘网站进行爬取，
 * **用户画像与职位信息标签化处理**  
     * 用户画像说明： [UserPortraitDescription](https://github.com/efishliu/Jobs-Recommendation-System/blob/master/User%20Portrait/UserPortraitDescription.md)  
     * 使用TF-IDF,word2vec提取关键词和向量化:  
-    python实现(本地)：[TF_IDF.py]()，[word2vec.py]()  
+    python实现(本地)：[TF_IDF.py](https://github.com/efishliu/Jobs-Recommendation-System/blob/master/User%20Portrait/TF_IDF.py)，[word2vec.py]()  
     spark ML实现：[spark_tf_idf.py]()，[spark_word2vec.py]()
     * 使用spark对学历，城市，工作经验，行业等进行薪资统计:[spark_mapreduce]()
     * 使用Hbase进行数据存储：HBase表结构设计：[HBase]()
