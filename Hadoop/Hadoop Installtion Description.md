@@ -68,6 +68,28 @@
   ```powershell
   cd /usr/local/package
   wget http://mirrors.tuna.tsinghua.edu.cn/apache/spark/spark-2.4.5/spark-2.4.5-bin-hadoop2.7.tgz
+  tar -zxf spark-2.4.0-bin-without-hadoop.tgz -C /usr/local/
+  cd /usr/local
+  mv ./spark-2.4.0-bin-without-hadoop/ ./spark
+  cd /usr/local/spark/conf
+  cp spark-env.sh.template spark-env.sh
+  vim spark-en.sh
+  cp slaves.template slaves
+  ```
+  配置spark：spark.en.sh,slaves。参考配置：[conf/spark](https://github.com/efishliu/Jobs-Recommendation-System/tree/master/Hadoop/conf/spark)  
+  设置环境变量：/etc/profice
+  ```powershell
+  # Spark 
+  export SPARK_HOME=/usr/local/spark
+  export PATH=$HADOOP_HOME/bin:$SPARK_HOME/bin:$PATH
+  export PYTHONPATH=$SPARK_HOME/python:$SPARK_HOME/python/lib/py4j-0.10.7-src.zip:$PYTHONPATH
+  export PYSPARK_PYTHON=python3
+  ```
+  测试spark:
+  ```powershell
+  cd /usr/local/spark/sbin
+  ./start-all.sh
+  run-example SparkPi 2>&1 | grep "Pi is"  
   ```
 * 安装mysql:
   ```powershell
