@@ -21,10 +21,11 @@ Jobs-Recommendation-System使用Scrapy爬虫框架对招聘网站进行爬取，
     * **基于单机的爬虫实现：** 在master节点上将数据爬取到MySQL数据库中并通过sqoop工具导入大数据平台。其中单机爬虫实现的源代码项目：[jobs](https://github.com/efishliu/Jobs-Recommendation-System/tree/master/Scrapy/jobs)，MySQL数据库建表SQL：[all_posts_data.sql](https://github.com/efishliu/Jobs-Recommendation-System/blob/master/Scrapy/all_posts_data.sql)。  
     需要安装*anconda3,scrapy,mysql,mysql-server,pymysql*模块。  
     参考文档：[Scrapy Document](https://scrapy.org/doc/)，[《精通python爬虫框架Scrapy》]()
-    * **基于分布式的爬虫实现：**
-      * 在master节点上整理爬取逻辑和去重工作，将需要爬取网页的url存入Redis共享队列中。  
-      * 3台slave节点从master节点的Redis共享队列中获取需要爬取的网页，并行地爬取和解析相应的网页，并将数据存储在各自的MySQL数据库中。  
+    * **基于分布式的爬虫实现：** 
+      * 在master节点上整理爬取逻辑和去重工作，将需要爬取网页的url存入Redis共享队列中。 [master爬虫程序](https://github.com/efishliu/Jobs-Recommendation-System/tree/master/Scrapy/master/master)  
+      * 3台slave节点从master节点的Redis共享队列中获取需要爬取的网页，并行地爬取和解析相应的网页，并将数据存储在各自的MySQL数据库中。[slave爬虫程序](https://github.com/efishliu/Jobs-Recommendation-System/tree/master/Scrapy/slave)  
       * sqoop工具并行抽取3台slave节点的数据到HDFS文件系统中。**(注意解决sqoop数据倾斜问题）**  
+    分布式爬虫项目说明：[ScrapyRedisDesc.md](https://github.com/efishliu/Jobs-Recommendation-System/blob/master/Scrapy/ScrapyRedisDesc.md)  
     参考文档：[Scrapy分布式爬虫](https://edu.csdn.net/notebook/python/week10/9.html)
 
 * **用户画像与职位信息标签化处理**  
