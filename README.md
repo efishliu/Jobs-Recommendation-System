@@ -31,7 +31,7 @@ Jobs-Recommendation-System使用Scrapy爬虫框架对招聘网站进行爬取，
 * **用户画像与职位信息标签化处理**  
     * 用户画像说明： [UserPortraitDescription](https://github.com/efishliu/Jobs-Recommendation-System/blob/master/User%20Portrait/UserPortraitDescription.md)  
     * 使用TF-IDF,word2vec提取关键词和向量化:  
-    python实现(本地)：[TF_IDF.py](https://github.com/efishliu/Jobs-Recommendation-System/blob/master/User%20Portrait/TF_IDF.py)，[word2vec.py]()  
+    python实现(本地)：[TF_IDF](https://github.com/efishliu/Jobs-Recommendation-System/tree/master/User%20Portrait/TF-IDF)，[word2vec.py](https://github.com/efishliu/Jobs-Recommendation-System/tree/master/User%20Portrait/Text%20vectorization)  
     spark ML实现：[spark_tf_idf.py]()，[spark_word2vec.py]()
     * 使用spark对学历，城市，工作经验，行业等进行薪资统计:[spark_mapreduce]()
     * 使用Hbase进行数据存储：HBase表结构设计：[HBase]()
