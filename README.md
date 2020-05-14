@@ -10,8 +10,9 @@ Jobs-Recommendation-System使用Scrapy爬虫框架对招聘网站进行爬取，
   基本设计框架图如下：
 <div align=center>
   <img src="https://github.com/efishliu/Jobs-Recommendation-System/blob/master/image/%E7%BB%98%E5%9B%BE1.jpg?raw=true" width = 60% height = 60% />
-</div>  
-* **后期设计框架**：~~(未构建完成)~~
+</div>   
+
+* **后期设计框架**： ~~(未构建完成)~~  
   * 使用4台云服务器，在存储端使用MySQL,HDFS,HBase3种存储方式，计算框架采用Spark
 
 ## 系统主要功能模块的实现  
